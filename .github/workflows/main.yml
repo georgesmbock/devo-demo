@@ -9,9 +9,9 @@ on:
       - 'main'
 
 jobs:
-  Test Format code:
+  Hello:
     runs-on: ubuntu-latest
 
     steps:
       - name: Hello Steps
-        run: echo "Hello world"
+        run: echo "Hello worldi"
