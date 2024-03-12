@@ -14,7 +14,7 @@ on:
       - 'main.py'
 jobs:
   test:
-    runs-on: ubuntun-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
