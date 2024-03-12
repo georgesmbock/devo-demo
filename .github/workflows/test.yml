@@ -1,0 +1,31 @@
+name: Run tests
+
+on:
+  # Déclencheur ou événement
+  pull_request:
+  # Lors de la demende d'extraction est initiée ou ouverte
+    type:
+      - opened
+  # Sur la branche main
+    branches:
+      - 'main'
+  # Ayant pour objet la modification de main.py
+    paths:
+      - 'main.py'
+jobs:
+  test:
+    runs-on: ubuntun-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.1.1
+        with:
+          fetch-depth: 0
+      - name: Update packages
+        run: sudo apt update
+      - name: Launch check coode
+        run: sudo apt install -y pycodestyle
+      - name: Check code
+        run: pycodestyle --first main.py
+      - name: Message
+        run: echo "Check Success !"
