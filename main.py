@@ -1,4 +1,5 @@
 print("Cool")
+print("merci")
 print(f"{9 + 9 + 2}")
 print("Lets go!")
 print("Hello, World!")
