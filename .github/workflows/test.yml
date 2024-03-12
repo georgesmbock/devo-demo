@@ -1,6 +1,10 @@
 name: Run tests
 
 on:
+  # Sur la branche main également
+  push:
+    branches:
+      - 'main'
   # Déclencheur ou événement
   pull_request:
   # Lors de la demende d'extraction est initiée ou ouverte
